@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Obrien Troy D.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/particles.js"></script>
+
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+
+            <a class="logo" href="#">Troy Dev.</a>
+
+            
+            <input type="checkbox" id="burger">
+            <label class="burger" for="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav>
+                <ul><a href="#">Home</a></ul>
+                <ul><a href="#">About</a></ul>
+                <ul><a href="#">Contact</a></ul>
+                <ul><a href="#">Services</a></ul>
+            </nav>
+
+        </header>
+
+        <section class="main-content">
+            <section class="main-info">
+                <h4>Hi I'm</h4>
+                <h1><span id="element"></span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, accusantium! Accusantium saepe eius molestias obcaecati amet dolor delectus.</p>
+
+                <div class="btn-links">
+                    <button class="active">Download CV</button>
+                    <button>Hire Me</button>
+                </div>
+            </section>
+
+            <section class="main-profile">
+                <img src="assets/imgs/1000005054-removebg.png" alt="">
+            </section>
+        </section>
+
+    </div>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script>
+    var typed = new Typed('#element', {
+        strings: ['Obrien Troy Dangan', 'Frontend Developer', 'Backend Developer'],
+        typeSpeed: 70,
+        loop: true,
+        loopCount: Infinity,
+        fadeOut: true,
+        fadeOutClass: 'typed-fade-out',
+        fadeOutDelay: 500,
+
+        
+    });
+    </script>
+</body>
+</html>

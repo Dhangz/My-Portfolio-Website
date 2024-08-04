@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --clr-gray-clr: #b1b1b1;
+    --clr-dark-clr: #424242;
+    --clr-white-clr: #d7d7d7;
+    --clr-darkblue-clr: #001f3f;
+    /* --clr-blue-clr: #1A43BF; */
+    --clr-blue-clr: #2520DE;
+    --clr-darkgray-clr: #26273b;
+    --clr-lightblue-clr: #6C68ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--clr-white-clr);
+}
+
+
+
+
+#particles-js {
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    height: 100vh;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(15deg, rgba(2,0,36,1), rgba(2,0,36,1));
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;  
+}
+
+header .logo {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--clr-blue-clr);
+}
+
+
+header .toggle-dropdown {
+    display: none;
+}
+
+header input {
+    display: none;
+}
+
+
+header nav {
+    display: flex;
+    gap: 70px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: var(--clr-white-clr);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul a:hover {
+    text-shadow: 2px 2px 30px #0800ff;
+    color: var(--clr-blue-clr);
+}
+
+.burger {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.burger input {
+    display: none;
+}
+
+.burger span {
+display: block;
+position: absolute;
+height: 3px;
+width: 100%;
+background: var(--clr-blue-clr);
+border-radius: 9px;
+opacity: 1;
+left: 0;
+transform: rotate(0deg);
+transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+}
+
+.main-content {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    height: 100vh;
+    gap: 50px;
+}
+
+.main-info h4 {
+    color: var(--clr-lightblue-clr);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.main-info h1 {
+    font-size: 47px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.main-info span {
+    color: var(--clr-lightblue-clr);
+}
+
+.main-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: var(--clr-gray-clr);
+}
+
+.main-info {
+    max-width: 600px;
+    padding: 20px;
+    position: relative;
+}
+
+
+.main-info .btn-links button {
+    cursor: pointer;
+    padding: 10px 40px;
+    border-radius: 40px;
+    border: 2px solid var(--clr-lightblue-clr);
+    background-color: var(--clr-darkgray-clr);
+    color: var(--clr-gray-clr);
+    margin: 20px 5px;
+
+}
+
+.btn-links button.active {
+    background-color: var(--clr-lightblue-clr);
+    color: var(--clr-darkgray-clr);
+    border: none;
+    font-weight: 500;
+}
+
+
+
+.main-profile {
+    min-width: 300px;
+    width: 200px;
+}
+
+.main-profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 50px #0800ff);
+    border: 2px solid var(--clr-lightblue-clr);
+    
+}
+
+
+
+
+@media (max-width: 768px) {
+nav {
+    position: absolute;
+    top: 90px;
+    /* background-color: var(--clr-darkgray-clr); */
+    background-color: rgba(38, 39, 59, .9);
+    flex-direction: column;
+    width: 100%;
+    right: -770px;
+    padding:  40px;
+    height: 100vh;
+    transition: 0.4s ease-out;
+}
+
+
+input[type="checkbox"]:checked ~ .burger span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+}
+
+input[type="checkbox"]:checked ~ .burger span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .burger span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 21px;
+    left: 5px;
+}
+
+input[type="checkbox"]:checked ~ nav {
+    right: 0;
+}
+
+.burger {
+    display: block;
+}
+}
