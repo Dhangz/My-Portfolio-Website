@@ -1,4 +1,4 @@
- 
+
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
@@ -72,10 +72,9 @@
     transition: 0.3s;
     }
 
-    /* nav ul a:hover {
-    text-shadow: 2px 2px 30px rgba(108, 104, 255, 1);
-    color: rgba(108, 104, 255, 1);
-    } */
+    html.sr .load-hidden {
+        visibility: hidden;
+    }      
 
     .burger {
     position: relative;
@@ -144,6 +143,7 @@
     }
 
     .social-links ul li {
+        cursor: pointer;
         border: 2px solid var(--clr-lightblue-clr);
         background: linear-gradient(to right, rgba(108, 104, 255, .1) 1%, transparent 40%,transparent 60% , rgba(108, 104, 255, .1) 100%);
         color: var(--clr-lightblue-clr);
@@ -219,7 +219,7 @@
     }
 
     .btn-links button:hover {
-        color: rgb(37, 32, 222);
+        color: var(--clr-lightblue-clr);
         box-shadow: inset 0 0 10px rgba(37, 32, 222, .6), 0 0 9px 3px rgba(37, 32, 222, .2);
     }
 
@@ -249,6 +249,22 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        animation: updown 2s ease-in-out infinite;
+    }
+
+    @keyframes updown {
+        0% {
+            transform: translateY(0);
+            
+        }
+
+        50% {
+            transform: translateY(-1rem);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
     }
 
 
@@ -297,7 +313,7 @@
     }
 
     #burger:checked + label + nav {
-        display: flex;      
+        display: flex;     
     }
 
     .burger {
@@ -326,12 +342,20 @@
     }
 
     .main-profile-pic {
-        transform: scale(.7);
+        max-width: 200px;
+        min-width: 200px;
+        transform: scale(0.8);
+    }
+
+    .main-profile-pic img {
+        width: 100%;
+        height: 100%;
     }
 
     .main-profile-pic:hover {
-        transform: scale(.6);
+        transform: scale(0.7);
     }
+
 
     .main-description > h3 {
         font-size: 16px;
@@ -355,6 +379,21 @@
     .btn-links button {
         
         transform: scale(.9);
+    }
+
+    .social-links {
+        top: 435px;
+        left: 150px;
+        margin: auto;
+        
+    }
+
+    .social-links ul {
+        flex-direction: row;
+    }
+
+    .social-links ul li {
+        transform: scale(.7);
     }
 
     }
